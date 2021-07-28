@@ -25,9 +25,9 @@ const connect = function () {
     setTimeout(()=>{
       conn.write("Move: up");
     }, 100 );
-    setInterval(()=>{
-      conn.write("Move: right");
-    }, 200 );
+    // setInterval(()=>{
+    //   conn.write("Move: right");
+    // }, 200 );
     
   },
   //() => {
