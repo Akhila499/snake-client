@@ -21,13 +21,25 @@ const connect = function () {
   conn.on('connect',()=>{
     console.log("Successfully connected to game server");
     conn.write('Name: AKI');
-  })
+    conn.write("Move: up");
+    setTimeout(()=>{
+      conn.write("Move: up");
+    }, 100 );
+    setInterval(()=>{
+      conn.write("Move: right");
+    }, 200 );
+    
+  },
+  //() => {
+   // conn.write('Move: up');
+  //}
+  )
+  
   
   return conn;
 };
 
-console.log("Connecting ...");
-connect();
+
 
 
 module.exports = { connect };
